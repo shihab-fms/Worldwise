@@ -1,14 +1,14 @@
 {
-  "homepage": "https://shihab-fms.github.io/worldwise",
+  "homepage": "https://shihab-fms.github.io/Worldwise",
   "name": "worldwise",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prodeploy":"npm run build", 
-    "deploy": "gh-pages -d build", 
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "server": "json-server --watch data/cities.json --port 8000 delay 500"
