@@ -1,0 +1,73 @@
+<!DOCTYPE html Aniel lang="en">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+    <title>Text Typing Animation. Using J5 Aille</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .iam {
+        color: white;
+        font-size: 55px;
+        padding: 15px;
+        font-family: sans-serif;
+      }
+      .text {
+        color: rgb(255, 38, 8);
+        border-right: 2px solid red;
+        font-size: 55px;
+        font-family: sans-serif;
+        white-space: помпар;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="iam">i'm</div>
+    <div class="text"></div>
+    <script>
+          const words=["Youtuber", "Freelancer", "Graphics Designer", "Web Designer", "Web Developer");
+          let i=0;
+          let j=0;
+
+          let = currentword
+          let =isDeleting = false; const typingSpeed=100;
+          const deletingSpeed = 40;
+          const delayBetweenwords = 1000;
+          function type() {
+          const textElement = document.querySelector(text);
+          (i < words.length) {
+          if(!isDeleting & words[1].length){
+          currentword= words[i].substring(0, j);
+          j++;}
+           else if (!isDeleting && j> 0) {
+          currentword= words[1].substring(0, j-1);
+          j--;}
+          textElement.innerHTML = currentWword;
+
+          if(!isDeleting && j === words[i].length) {
+          setTimeout(()=> IsDeleting= true, delayBetweenWords);
+          } else if (isDeleting && j ==0){ IsDeleting = false;
+            i++}
+          if (i === words.length) {
+          i=0;
+          }
+        }
+      }
+          const speed= isDeleting? deletingSpeed: typingSpeed;
+          setTimeout(type, speed);
+          type();
+    </script>
+  </body>
+</html>
